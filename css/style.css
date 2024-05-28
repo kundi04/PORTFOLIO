@@ -133,13 +133,14 @@ table {
   border-spacing: 0;
 }
 
-#hero {
+#Home {
   height: 100vh;
+  width: 100%;
   background-image: url("/images/pexels-shotbyrain-4337031.jpg");
   background-size: cover;
   background-position: center;
 }
-#hero .navba h3 {
+#Home .navba h3 {
   font-family: bold;
   font-size: 30px;
   font-weight: bold;
@@ -147,25 +148,25 @@ table {
   padding-left: 30px;
   color: yellow;
 }
-#hero .navba ul {
+#Home .navba ul {
   display: flex;
-  margin-left: 650px;
+  margin-left: 630px;
   margin-top: -20px;
 }
-#hero .navba ul li a {
+#Home .navba ul li a {
   font-family: regular;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
-  padding: 0px 30px;
+  padding: 0px 8px;
   text-decoration: none;
 }
-#hero ul li a:hover {
+#Home ul li a:hover {
   color: yellow;
 }
-#hero .container {
+#Home .container {
   width: 100%;
 }
-#hero .container .hero-title {
+#Home .container .hero-title {
   font-family: bold;
   font-size: 70px;
   font-weight: 600;
@@ -173,27 +174,31 @@ table {
   text-align: center;
   margin-top: 200px;
 }
-#hero .container .hero-title span {
+#Home .container .hero-title span {
   color: yellow;
 }
-#hero .container .hero-subtitle {
+#Home .container .hero-subtitle {
   font-family: regular;
   font-size: 30px;
   font-style: italic;
   color: yellow;
   text-align: center;
 }
+
 @media (min-width: 768px) {
-  #hero .hero .hero-title {
+  .Home h1 {
+    font-size: 20px;
+  }
+  .Home .hero-title {
     font-size: 4.5rem;
   }
-}
-@media (min-width: 768px) {
-  #hero .hero .hero-subtitle {
+  .Home .hero-title .hero-subtitle {
     font-size: 2.5rem;
   }
+  .Home .hero-title li a {
+    display: none;
+  }
 }
-
 hr {
   color: black;
 }
@@ -225,13 +230,17 @@ hr {
   color: white;
   border: none;
   border-radius: 20px;
+  font-family: regular;
 }
 
 .btns:hover {
   color: yellow;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
+  #About {
+    margin-top: 50px;
+  }
   .about-mf .box-pl2 {
     margin-top: 3rem;
     padding-left: 0rem;
@@ -246,16 +255,33 @@ hr {
   color: #4e4e4e;
 }
 
-.skill-mf .progress {
-  background-color: #cde1f8;
-  margin: 0.5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: 0.7rem;
+.list {
+  display: flex;
 }
 
-.skill-mf .progress .progress-bar {
-  height: 0.7rem;
-  background-color: rgb(255, 255, 111);
+ul {
+  padding: 0px 8px;
+  margin-left: -30px;
+}
+ul li {
+  padding: 10px 28px;
+  font-family: regular;
+  font-weight: bold;
+}
+
+.bone {
+  margin-top: 20px;
+  width: 30vh;
+  height: 8vh;
+  background-color: #4e4e4e;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: regular;
+}
+
+.bone:hover {
+  color: yellow;
 }
 
 .about-me .title-box-2 h2 {
@@ -264,15 +290,44 @@ hr {
   padding-bottom: 20px;
 }
 
-#services {
+#skills {
+  height: 100vh;
+  width: 100%;
+  margin-top: 30vh;
+  background-color: rgba(228, 228, 228, 0.76);
+}
+#skills .line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#skills .line h2 {
+  font-family: bold;
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: -80px;
+  text-align: center;
+}
+#skills .line .pic {
+  margin-top: -260px;
+}
+#skills .line .pone {
+  font-family: regular;
+  font-weight: 700;
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+#Services {
   height: 100vh;
   margin-top: 30px;
 }
-#services .title-box h2 {
+#Services .title-box h2 {
   font-size: 50px;
   font-weight: bold;
 }
-#services .title-box .subtitle-a {
+#Services .title-box .subtitle-a {
   padding-top: 10px;
   font-size: 20px;
   font-weight: normal;
@@ -283,11 +338,11 @@ hr {
 }
 
 .service-box {
-  height: 65vh;
+  height: 60vh;
   background-color: rgba(228, 228, 228, 0.76);
   padding: 30px 18px;
   border-radius: 1rem;
-  margin-top: 80px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -303,6 +358,7 @@ hr {
 }
 
 .service-box .ico-circle {
+  margin-top: -50px;
   border-radius: 280px;
   padding: 20px;
   transition: all 1s ease;
@@ -312,7 +368,11 @@ hr {
 }
 
 .service-box .ico-circle:hover {
-  transform: scale(2);
+  transform: scale(1.5);
+}
+
+.service-content {
+  margin-top: -20px;
 }
 
 .service-box .ico-circle i {
@@ -331,15 +391,15 @@ hr {
   color: #4e4e4e;
 }
 
-#work {
+#Projects {
   height: 100vh;
 }
-#work .title-box h2 {
+#Projects .title-box h2 {
   font-size: 50px;
   font-weight: bold;
   padding-bottom: 10px;
 }
-#work .title-box p {
+#Projects .title-box p {
   font-size: 20px;
   padding-bottom: 80px;
 }
@@ -374,7 +434,7 @@ hr {
 }
 
 .work-content .w-more .w-ctegory {
-  color: #0078ff;
+  color: rgb(134, 134, 32);
   font-size: 16px;
 }
 
@@ -397,15 +457,15 @@ hr {
   padding: 5px 0px;
 }
 
-#contact {
+#Contact {
   height: 100vh;
   margin-top: 150px;
 }
-#contact .title-box-2 h3 {
+#Contact .title-box-2 h3 {
   font-size: 30px;
   margin-bottom: 30px;
 }
-#contact .title-box-2 h5 {
+#Contact .title-box-2 h5 {
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -422,6 +482,7 @@ hr {
 .more-info .list-ico li {
   font-size: 20px;
   padding: 5px 0px;
+  margin-left: 25px;
 }
 
 .footer-paralax {
